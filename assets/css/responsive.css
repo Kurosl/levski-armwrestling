@@ -36,9 +36,9 @@
   }
   .hero-logos-top    { display: contents; }
   .hero-logos-bottom { display: contents; }
-  .hero-logo-bg      { width: 38vw; height: 38vw; max-width: 220px; max-height: 220px; }
-  .hero-logo-osk     { width: 44vw; height: 44vw; max-width: 260px; max-height: 260px; margin-top: 0; }
-  .hero-logo-center  { width: 36vw; height: 36vw; max-width: 210px; max-height: 210px; }
+  .hero-logo-bg      { width: 38vw !important; height: 38vw !important; max-width: 220px; max-height: 220px; }
+  .hero-logo-osk     { width: 44vw !important; height: 44vw !important; max-width: 260px; max-height: 260px; margin-top: 0; }
+  .hero-logo-center  { width: 36vw !important; height: 36vw !important; max-width: 210px; max-height: 210px; }
 
   /* About */
   .about-grid { grid-template-columns: 1fr; gap: var(--sp-lg); }
