@@ -36,9 +36,9 @@
   }
   .hero-logos-top    { display: contents; }
   .hero-logos-bottom { display: contents; }
-  .hero-logo-bg      { width: clamp(88px, 24vw, 120px); height: clamp(88px, 24vw, 120px); }
-  .hero-logo-osk     { width: clamp(100px, 28vw, 140px); height: clamp(100px, 28vw, 140px); margin-top: 0; }
-  .hero-logo-center  { width: clamp(80px, 22vw, 110px); height: clamp(80px, 22vw, 110px); }
+  .hero-logo-bg      { width: clamp(120px, 28vw, 170px); height: clamp(120px, 28vw, 170px); }
+  .hero-logo-osk     { width: clamp(140px, 32vw, 200px); height: clamp(140px, 32vw, 200px); margin-top: 0; }
+  .hero-logo-center  { width: clamp(110px, 26vw, 160px); height: clamp(110px, 26vw, 160px); }
 
   /* About */
   .about-grid { grid-template-columns: 1fr; gap: var(--sp-lg); }
