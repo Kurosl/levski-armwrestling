@@ -1,0 +1,120 @@
+/**
+ * ════════════════════════════════════════════════════════
+ * TEAM / ATHLETES  —  assets/css/team.css
+ * ════════════════════════════════════════════════════════
+ */
+
+#team {
+  position: relative;
+  background: var(--dark);
+  padding: var(--sp-xl) var(--sp-md);
+}
+
+/* Grid */
+.athletes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-md);
+}
+
+/* ── Card ─────────────────────────────────────────────────── */
+.athlete-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform var(--tr-fast), border-color var(--tr-fast), box-shadow var(--tr-fast);
+  cursor: pointer;
+}
+.athlete-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
+  box-shadow: 0 24px 64px rgba(0,44,138,0.45), 0 0 0 1px var(--gold);
+}
+
+/* ── Photo area ───────────────────────────────────────────── */
+.athlete-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: #111525;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Actual photo (when provided) */
+.athlete-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform var(--tr-mid);
+}
+.athlete-card:hover .athlete-img img { transform: scale(1.04); }
+
+/* Placeholder person icon */
+.athlete-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.athlete-placeholder svg { opacity: 0.22; }
+
+/* Initials watermark */
+.athlete-initials {
+  position: absolute;
+  bottom: var(--sp-sm);
+  right: var(--sp-sm);
+  font-family: var(--ff-display);
+  font-size: 3rem;
+  color: rgba(240,237,232,0.06);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ── Info bar ─────────────────────────────────────────────── */
+.athlete-info {
+  padding: var(--sp-sm) var(--sp-sm) var(--sp-md);
+}
+.athlete-name {
+  font-family: var(--ff-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+.athlete-achievement {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ── Hover overlay ────────────────────────────────────────── */
+.athlete-hover {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 16, 72, 0.93);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-md);
+  opacity: 0;
+  transition: opacity var(--tr-mid);
+}
+.athlete-card:hover .athlete-hover { opacity: 1; }
+
+.hover-content { text-align: center; }
+.hover-content .athlete-name { font-size: 1.5rem; margin-bottom: 0.4rem; }
+.hover-content .weight-badge { margin-bottom: var(--sp-sm); }
+.athlete-bio {
+  font-size: 0.84rem;
+  color: rgba(240,237,232,0.82);
+  line-height: 1.65;
+}

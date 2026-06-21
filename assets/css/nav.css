@@ -1,0 +1,213 @@
+/**
+ * ════════════════════════════════════════════════════════
+ * NAVIGATION  —  assets/css/nav.css
+ * ════════════════════════════════════════════════════════
+ */
+
+/* ── Sticky bar ─────────────────────────────────────────── */
+#navbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 900;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--sp-md);
+  transition: background var(--tr-mid), backdrop-filter var(--tr-mid), border-color var(--tr-mid);
+  border-bottom: 1px solid transparent;
+}
+#navbar.scrolled {
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-color: var(--border);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+/* ── Logo group wrapper ─────────────────────────────────── */
+.nav-logos {
+  display: flex;
+  align-items: center;
+}
+
+/* ── Logo ────────────────────────────────────────────────── */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-logo-divider {
+  display: block;
+  width: 1px;
+  height: 36px;
+  background: rgba(240, 237, 232, 0.18);
+  flex-shrink: 0;
+}
+
+.nav-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: opacity var(--tr-fast);
+  /* blend white background away on dark navbar */
+  mix-blend-mode: multiply;
+}
+.nav-logo-img:hover { opacity: 0.85; }
+
+/* Text fallback — shown only if logo.png is missing */
+.nav-logo-text {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  color: var(--text);
+  display: none; /* JS shows this on image error */
+}
+.nav-logo-text .accent { color: var(--gold); }
+
+/* ── Desktop links ───────────────────────────────────────── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-links a {
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color var(--tr-fast);
+  position: relative;
+  padding-bottom: 2px;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--tr-fast);
+}
+.nav-links a:hover { color: var(--text); }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+/* ── Right side ──────────────────────────────────────────── */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lang-btn {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  padding: 0.28rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  transition: all var(--tr-fast);
+}
+.lang-btn:hover { color: var(--gold); border-color: var(--gold); }
+
+.nav-cta {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--gold);
+  color: var(--blue);
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius);
+  transition: all var(--tr-fast);
+}
+.nav-cta:hover { background: #ffd42a; transform: translateY(-1px); }
+
+/* ── Hamburger ───────────────────────────────────────────── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 17px;
+}
+.hamburger span {
+  display: block;
+  height: 2px;
+  background: var(--text);
+  border-radius: 1px;
+  transition: all var(--tr-mid);
+  transform-origin: center;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+/* ── Mobile drawer ───────────────────────────────────────── */
+#mobileMenu {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  inset: auto 0 auto 0;
+  z-index: 899;
+  background: rgba(10, 10, 15, 0.97);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  flex-direction: column;
+  padding: var(--sp-md);
+  gap: 0.2rem;
+  border-bottom: 1px solid var(--border);
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity var(--tr-mid), transform var(--tr-mid);
+}
+#mobileMenu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+#mobileMenu a {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: color var(--tr-fast), padding-left var(--tr-fast);
+}
+#mobileMenu a:hover { color: var(--gold); padding-left: 6px; }
+#mobileMenu .mobile-cta {
+  display: block;
+  text-align: center;
+  margin-top: var(--sp-sm);
+  background: var(--gold);
+  color: var(--blue);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  border-bottom: none;
+  transition: background var(--tr-fast);
+}
+#mobileMenu .mobile-cta:hover { background: #ffd42a; padding-left: 0; }

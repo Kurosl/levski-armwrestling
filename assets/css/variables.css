@@ -1,0 +1,56 @@
+/**
+ * ════════════════════════════════════════════════════════
+ * CSS DESIGN TOKENS  —  assets/css/variables.css
+ * ════════════════════════════════════════════════════════
+ *
+ * Change colors, fonts, spacing here.
+ * Every other CSS file references these variables.
+ */
+
+:root {
+  /* ── Brand colors ─────────────────────────── */
+  --blue:          #002C8A;
+  --blue-glow:     rgba(0, 44, 138, 0.55);
+  --blue-subtle:   rgba(0, 44, 138, 0.07);
+  --blue-mid:      rgba(0, 44, 138, 0.16);
+  --gold:          #F5C400;
+  --gold-dim:      rgba(245, 196, 0, 0.14);
+  --gold-border:   rgba(245, 196, 0, 0.32);
+
+  /* ── Backgrounds ──────────────────────────── */
+  --dark:          #0A0A0F;
+  --surface:       #111827;
+  --surface-2:     #161f30;
+
+  /* ── Text ─────────────────────────────────── */
+  --text:          #F0EDE8;
+  --text-muted:    rgba(240, 237, 232, 0.56);
+
+  /* ── Borders ──────────────────────────────── */
+  --border:        rgba(240, 237, 232, 0.07);
+
+  /* ── Typography ───────────────────────────── */
+  --ff-display:    'Bebas Neue', 'Barlow Condensed', sans-serif;
+  --ff-condensed:  'Barlow Condensed', sans-serif;
+  --ff-body:       'IBM Plex Sans', system-ui, sans-serif;
+
+  /* ── Spacing ──────────────────────────────── */
+  --sp-xs:  0.5rem;
+  --sp-sm:  1rem;
+  --sp-md:  2rem;
+  --sp-lg:  4rem;
+  --sp-xl:  6rem;
+  --sp-xxl: 10rem;
+
+  /* ── Transitions ──────────────────────────── */
+  --tr-fast: 150ms ease;
+  --tr-mid:  300ms ease;
+  --tr-slow: 600ms ease;
+
+  /* ── Layout ───────────────────────────────── */
+  --nav-h:   72px;
+  --radius:  3px;
+  --diag:    80px;
+  --max-w:   1400px;
+
+}

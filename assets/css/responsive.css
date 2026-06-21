@@ -1,0 +1,68 @@
+/**
+ * ════════════════════════════════════════════════════════
+ * RESPONSIVE  —  assets/css/responsive.css
+ * All media queries for the site in one place
+ * ════════════════════════════════════════════════════════
+ */
+
+/* ── Tablet (max 1024px) ─────────────────────────────────── */
+@media (max-width: 1024px) {
+  /* Nav */
+  .nav-links, .lang-btn, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  #mobileMenu { display: flex; }
+
+  /* Hero */
+  .hero-inner { grid-template-columns: 1fr; gap: var(--sp-lg); }
+  .hero-visual { display: none; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; gap: var(--sp-lg); }
+  .stats-grid { grid-template-columns: repeat(4, 1fr); }
+
+  /* Achievements */
+  .achievements-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Training */
+  .training-grid { grid-template-columns: 1fr; gap: var(--sp-lg); }
+  .features-col { padding-top: 0; }
+
+  /* Team */
+  .athletes-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Footer */
+  .footer-main { grid-template-columns: 1fr 1fr; gap: var(--sp-lg); }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+/* ── Mobile (max 640px) ──────────────────────────────────── */
+@media (max-width: 640px) {
+  :root {
+    --sp-md:  1.25rem;
+    --sp-lg:  2.5rem;
+    --sp-xl:  4rem;
+    --diag:   48px;
+  }
+
+  /* Hero */
+  h1.hero-title { font-size: clamp(56px, 14vw, 90px); }
+  .hero-ctas { flex-direction: column; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
+
+  /* About */
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Achievements */
+  .achievements-grid { grid-template-columns: 1fr; }
+
+  /* Team */
+  .athletes-grid { grid-template-columns: 1fr; }
+
+  /* Join */
+  .contact-info { flex-direction: column; align-items: center; gap: var(--sp-sm); }
+
+  /* Footer */
+  .footer-main { grid-template-columns: 1fr; }
+  .footer-brand { grid-column: auto; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}

@@ -1,0 +1,169 @@
+/**
+ * ════════════════════════════════════════════════════════
+ * HERO SECTION  —  assets/css/hero.css
+ * ════════════════════════════════════════════════════════
+ */
+
+#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--dark);
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--diag)), 0 100%);
+}
+
+/* Radial glow */
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 90% 70% at 22% 55%, var(--blue-glow) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 72% 40%, rgba(0,44,138,0.18) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Grain texture overlay */
+#hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.038;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size: 220px 220px;
+}
+
+/* Content grid */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--sp-xl);
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: calc(var(--nav-h) + var(--sp-lg)) var(--sp-md) calc(var(--sp-xl) + var(--diag));
+  width: 100%;
+}
+
+.hero-text { max-width: 780px; }
+
+/* Eyebrow */
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--sp-md);
+  opacity: 0;
+  transform: translateY(16px);
+  animation: heroIn 0.6s ease forwards 0.15s;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* Title */
+h1.hero-title {
+  font-family: var(--ff-display);
+  font-size: clamp(72px, 11vw, 136px);
+  line-height: 0.88;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-md);
+}
+.hero-title .line {
+  display: block;
+  opacity: 0;
+  transform: translateY(24px);
+}
+.hero-title .line-1 { animation: heroIn 0.7s ease forwards 0.3s; }
+.hero-title .line-2 { animation: heroIn 0.7s ease forwards 0.5s; }
+.hero-title .line-3 {
+  color: var(--gold);
+  animation: heroIn 0.7s ease forwards 0.7s;
+}
+
+/* Subtitle */
+.hero-sub {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  margin-bottom: var(--sp-lg);
+  opacity: 0;
+  transform: translateY(16px);
+  animation: heroIn 0.7s ease forwards 0.9s;
+}
+
+/* CTAs */
+.hero-ctas {
+  display: flex;
+  gap: var(--sp-sm);
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: heroIn 0.7s ease forwards 1.05s;
+}
+
+/* ── Right-side logo visual ──────────────────────────────── */
+.hero-visual {
+  flex-shrink: 0;
+  opacity: 0;
+  animation: heroIn 1.2s ease forwards 0.65s;
+}
+
+.hero-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-md);
+}
+
+.hero-logos-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-lg);
+}
+
+.hero-logos-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: -40px;
+}
+
+/* The club logos used as hero visuals */
+.hero-logo-bg {
+  width: clamp(150px, 16vw, 270px);
+  height: clamp(150px, 16vw, 270px);
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+/* OSK logo has tall text below its circle — needs a bigger box */
+.hero-logo-osk {
+  width: clamp(220px, 24vw, 400px);
+  height: clamp(220px, 24vw, 400px);
+  margin-top: 60px;
+}
+
+.hero-logo-center {
+  width: clamp(130px, 14vw, 240px);
+  height: clamp(130px, 14vw, 240px);
+}

@@ -1,0 +1,19 @@
+# Source documents (not needed for the website)
+*.docx
+
+# Python server
+# (PDF files are included)
+__pycache__/
+*.py[cod]
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.swp
+
+# Temp extract folders
+*.docx_extract/

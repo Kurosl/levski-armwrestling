@@ -1,0 +1,126 @@
+/**
+ * ════════════════════════════════════════════════════════
+ * FOOTER  —  assets/css/footer.css
+ * ════════════════════════════════════════════════════════
+ */
+
+#footer {
+  background: #06060a;
+  border-top: 2px solid var(--gold);
+  padding: var(--sp-xl) var(--sp-md) var(--sp-md);
+}
+
+/* ── Main row ─────────────────────────────────────────────── */
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: var(--sp-xl);
+  margin-bottom: var(--sp-lg);
+  padding-bottom: var(--sp-lg);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Column: Brand */
+.footer-brand .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: var(--sp-sm);
+}
+.footer-logo-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+.footer-logo-text {
+  font-family: var(--ff-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+.footer-logo-text .accent { color: var(--gold); }
+.footer-tagline {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 260px;
+}
+
+/* Column: Quick links */
+.footer-col h4 {
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--sp-sm);
+}
+.footer-links { display: flex; flex-direction: column; gap: 0.55rem; }
+.footer-links a {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  transition: color var(--tr-fast), padding-left var(--tr-fast);
+}
+.footer-links a:hover { color: var(--text); padding-left: 4px; }
+
+/* Column: Social */
+.social-row {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: var(--sp-sm);
+}
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all var(--tr-fast);
+}
+.social-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: var(--gold-dim);
+  transform: translateY(-2px);
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.footer-contact a {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  transition: color var(--tr-fast);
+}
+.footer-contact a:hover { color: var(--gold); }
+
+/* ── Bottom bar ───────────────────────────────────────────── */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.footer-copy {
+  font-size: 0.73rem;
+  color: var(--text-muted);
+}
+.footer-bottom-links {
+  display: flex;
+  gap: var(--sp-md);
+}
+.footer-bottom-links a {
+  font-size: 0.73rem;
+  color: var(--text-muted);
+  transition: color var(--tr-fast);
+}
+.footer-bottom-links a:hover { color: var(--gold); }

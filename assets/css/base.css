@@ -1,0 +1,137 @@
+/**
+ * ════════════════════════════════════════════════════════
+ * BASE STYLES  —  assets/css/base.css
+ * Reset · Body · Containers · Utilities · Keyframes
+ * ════════════════════════════════════════════════════════
+ */
+
+/* ── Reset ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html  { scroll-behavior: smooth; font-size: 16px; }
+body  {
+  background: var(--dark);
+  color: var(--text);
+  font-family: var(--ff-body);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img, svg { display: block; max-width: 100%; }
+a    { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+input, textarea { font-family: inherit; }
+
+/* ── Container ──────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--sp-md);
+}
+
+/* ── Section tag (gold label above headings) ─────────────── */
+.section-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--gold);
+  border-radius: 2px;
+  margin-bottom: var(--sp-md);
+}
+
+/* ── Gold rule line ──────────────────────────────────────── */
+.gold-line {
+  display: block;
+  width: 52px;
+  height: 3px;
+  background: var(--gold);
+  margin-bottom: var(--sp-md);
+}
+
+/* ── Section titles ──────────────────────────────────────── */
+.section-title {
+  font-family: var(--ff-display);
+  font-size: clamp(42px, 6vw, 74px);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+.section-title .accent { color: var(--gold); }
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--ff-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius);
+  transition: all var(--tr-fast);
+  cursor: pointer;
+}
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 2px solid rgba(240, 237, 232, 0.55);
+}
+.btn-outline:hover { border-color: var(--text); background: rgba(240,237,232,0.05); }
+.btn-gold {
+  background: var(--gold);
+  color: var(--blue);
+  border: 2px solid var(--gold);
+}
+.btn-gold:hover { background: transparent; color: var(--gold); transform: translateY(-2px); }
+
+/* ── Weight badge ────────────────────────────────────────── */
+.weight-badge {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--gold);
+  padding: 0.18rem 0.55rem;
+  border-radius: 2px;
+  margin-bottom: 0.45rem;
+}
+
+/* ── Scroll-reveal animation ─────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Keyframes ───────────────────────────────────────────── */
+@keyframes heroIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Horizontal gold rule (achievements) ─────────────────── */
+.ach-rule {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-border) 30%, var(--gold-border) 70%, transparent);
+  margin: var(--sp-lg) 0;
+}
+
+/* ── Section header block ────────────────────────────────── */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--sp-lg);
+}

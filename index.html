@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Левски Канадска Борба — клуб по канадска борба в София, България. Тренировки за всички нива.">
+  <title>Левски Канадска Борба | Arm Wrestling Sofia</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS — order matters: variables first -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/team.css">
+  <link rel="stylesheet" href="assets/css/coaches.css">
+  <link rel="stylesheet" href="assets/css/news.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- JS entry point (ES module) -->
+  <script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════ -->
+<nav id="navbar" role="navigation" aria-label="Основна навигация">
+  <div class="nav-inner">
+
+    <!-- Logos -->
+    <div class="nav-logos">
+      <a class="nav-logo" href="#hero" aria-label="Левски Канадска Борба — начало">
+        <img
+          class="nav-logo-img"
+          src="assets/images/logo.jpg"
+          alt="Левски Канадска Борба лого"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+        >
+        <span class="nav-logo-text" style="display:none">ЛЕВСКИ <span class="accent">АРМ</span></span>
+        <span class="nav-logo-divider" aria-hidden="true"></span>
+        <img
+          class="nav-logo-img"
+          src="assets/images/levski-osk.png"
+          alt="О.С.К. Левски София"
+          onerror="this.style.display='none'"
+        >
+      </a>
+    </div>
+
+    <!-- Desktop links -->
+    <ul class="nav-links" role="list">
+      <li><a href="#about">За нас</a></li>
+      <li><a href="#news">Новини</a></li>
+      <li><a href="#team">Отбор</a></li>
+      <li><a href="#coaches">Треньори</a></li>
+      <li><a href="#gallery">Галерия</a></li>
+      <li><a href="#training">Тренировки</a></li>
+      <li><a href="#join">Контакт</a></li>
+    </ul>
+
+    <!-- Right side -->
+    <div class="nav-right">
+      <button class="lang-btn" aria-label="Switch language">EN</button>
+      <a class="nav-cta" href="#join">Присъедини се</a>
+      <button class="hamburger" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<nav id="mobileMenu" aria-label="Мобилна навигация">
+  <a href="#about">За нас</a>
+  <a href="#news">Новини</a>
+  <a href="#team">Отбор</a>
+  <a href="#coaches">Треньори</a>
+  <a href="#gallery">Галерия</a>
+  <a href="#training">Тренировки</a>
+  <a href="#join">Контакт</a>
+  <a class="mobile-cta" href="#join">Присъедини се</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Начален екран">
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <div class="hero-inner container">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Левски · София · България</p>
+
+      <h1 class="hero-title">
+        <span class="line line-1">ЛЕВСКИ</span>
+        <span class="line line-2">КАНАДСКА</span>
+        <span class="line line-3">БОРБА</span>
+      </h1>
+
+      <p class="hero-sub">
+        Клуб по канадска борба към спортен клуб „Левски".<br>
+        Тренировки за всички нива — от начинаещи до национални шампиони.
+      </p>
+
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="#join">Присъедини се</a>
+        <a class="btn btn-outline" href="#about">Научи повече</a>
+      </div>
+    </div>
+
+    <!-- Logos as hero visual -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-logos">
+        <div class="hero-logos-top">
+          <img
+            class="hero-logo-bg"
+            src="assets/images/logo.jpg"
+            alt=""
+            onerror="this.style.display='none'"
+          >
+          <img
+            class="hero-logo-bg hero-logo-osk"
+            src="assets/images/levski-osk.png"
+            alt=""
+            onerror="this.style.display='none'"
+          >
+        </div>
+        <div class="hero-logos-bottom">
+          <img
+            class="hero-logo-bg hero-logo-center"
+            src="assets/images/federation.png"
+            alt=""
+            onerror="this.style.display='none'"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════     TEAM / ОТБОР
+════════════════════════════════════════════════════════ -->
+<section id="team" aria-labelledby="team-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Нашият отбор</span>
+      <h2 id="team-heading" class="section-title">
+        СПОРТИСТИ<br><span class="accent">НА ЛЕВСКИ</span>
+      </h2>
+    </div>
+
+    <!-- Cards injected by renderTeam() -->
+    <div id="athletes-grid" class="athletes-grid" aria-label="Спортисти"></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     COACHES / ТРЕНЬОРИ
+════════════════════════════════════════════════════════ -->
+<section id="coaches" aria-labelledby="coaches-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Треньорски екип</span>
+      <h2 id="coaches-heading" class="section-title">
+        НАШИТЕ<br><span class="accent">ТРЕНЬОРИ</span>
+      </h2>
+    </div>
+
+    <!-- Cards injected by renderCoaches() -->
+    <div id="coaches-grid" class="coaches-grid" aria-label="Треньори"></div>
+
+    <!-- Group photo banner injected by renderCoaches() -->
+    <div id="coaches-group" class="coaches-banner reveal" aria-label="Треньорският екип"></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     GALLERY / ГАЛЕРИЯ
+════════════════════════════════════════════════════════ -->
+<section id="gallery" aria-labelledby="gallery-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Галерия</span>
+      <h2 id="gallery-heading" class="section-title">
+        МОМЕНТИ ОТ<br><span class="accent">ТАТАМИТО</span>
+      </h2>
+    </div>
+
+    <!-- Filter tabs injected by renderGallery() -->
+    <div id="gallery-filters" class="gallery-filters reveal" role="tablist" aria-label="Филтри"></div>
+
+    <!-- Photo tiles injected by renderGallery() -->
+    <div id="gallery-grid" class="gallery-grid" aria-label="Снимки от събития"></div>
+  </div>
+</section>
+
+<!-- Lightbox (shared by gallery) -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Преглед на снимка">
+  <button class="lightbox-close" aria-label="Затвори">&times;</button>
+  <button class="lightbox-prev" aria-label="Предишна">&#8249;</button>
+  <button class="lightbox-next" aria-label="Следваща">&#8250;</button>
+  <img class="lightbox-img" src="" alt="">
+  <p class="lightbox-caption"></p>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     NEWS / НОВИНИ
+════════════════════════════════════════════════════════ -->
+<section id="news" aria-labelledby="news-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Новини</span>
+      <h2 id="news-heading" class="section-title">
+        ОТ ЖИВОТА<br><span class="accent">НА КЛУБА</span>
+      </h2>
+    </div>
+
+    <!-- Cards injected by renderNews() -->
+    <div id="news-grid" class="news-grid" aria-label="Новини от клуба"></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ABOUT / ИСТОРИЯ
+════════════════════════════════════════════════════════ -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Stats column (populated by main.js from config.stats) -->
+      <div>
+        <span class="section-tag reveal">Клубна статистика</span>
+        <div id="stats-grid" class="stats-grid" aria-label="Статистика"></div>
+      </div>
+
+      <!-- Prose column -->
+      <div class="about-prose">
+        <span class="section-tag reveal">За нас</span>
+        <h2 id="about-heading" class="reveal">
+          ИСТОРИЯ<br><span class="accent">НА КЛУБА</span>
+        </h2>
+        <!-- Paragraphs injected by main.js from config.about.paragraphs -->
+        <div id="about-prose-text" class="reveal"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     TRAINING / ТРЕНИРОВКИ
+════════════════════════════════════════════════════════ -->
+<section id="training" aria-labelledby="training-heading">
+  <div class="container">
+    <div class="training-grid">
+
+      <!-- Left: schedule + map -->
+      <div>
+        <span class="section-tag reveal">Тренировъчен план</span>
+        <h2 id="training-heading" class="schedule-heading reveal">
+          ГРАФИК НА<br><span class="accent">ТРЕНИРОВКИТЕ</span>
+        </h2>
+
+        <div class="schedule-wrap reveal">
+          <div class="sched-header" aria-hidden="true">
+            <span>Ден</span><span>Час</span><span>Локация</span>
+          </div>
+          <!-- Rows injected by renderSchedule() -->
+          <div id="schedule-body" role="list" aria-label="Тренировъчен график"></div>
+        </div>
+
+        <!-- Map embed (src set by main.js from config.mapEmbedUrl) -->
+        <div class="map-wrap reveal" aria-label="Карта с локация">
+          <iframe
+            id="map-frame"
+            src=""
+            title="Зала Левски на картата"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Right: feature cards -->
+      <div class="features-col" id="features-grid" aria-label="Предимства"></div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     JOIN / ПРИСЪЕДИНИ СЕ
+════════════════════════════════════════════════════════ -->
+<section id="join" aria-labelledby="join-heading">
+  <div class="container">
+    <div class="join-inner">
+      <span class="section-tag reveal">Стани член</span>
+      <h2 id="join-heading" class="join-headline reveal">
+        ПРИСЪЕДИНИ<br><span class="accent">СЕ СЕГА</span>
+      </h2>
+      <p class="join-sub reveal">
+        Попълни формата и ние ще се свържем с теб в рамките на 24 часа.
+      </p>
+
+      <!-- Form -->
+      <form id="joinForm" class="contact-form reveal" novalidate aria-label="Форма за контакт">
+        <div class="form-group">
+          <label for="f-name">Твоето име</label>
+          <input
+            id="f-name"
+            class="form-control"
+            type="text"
+            placeholder="Иван Иванов"
+            autocomplete="name"
+            minlength="2"
+            required
+          >
+          <span class="error-msg" role="alert">Моля въведи поне 2 символа</span>
+        </div>
+
+        <div class="form-group">
+          <label for="f-contact">Имейл или телефон</label>
+          <input
+            id="f-contact"
+            class="form-control"
+            type="text"
+            placeholder="email@example.com или 0888 123 456"
+            autocomplete="email"
+            required
+          >
+          <span class="error-msg" role="alert">Моля въведи валиден имейл или телефон</span>
+        </div>
+
+        <div class="form-group">
+          <label for="f-message">Съобщение <small style="opacity:.5;font-weight:400">(по желание)</small></label>
+          <textarea
+            id="f-message"
+            class="form-control"
+            placeholder="Разкажи ни малко за себе си…"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Изпрати запитване</button>
+      </form>
+
+      <!-- Success message (shown after valid submit) -->
+      <div id="formSuccess" class="form-success" role="status" aria-live="polite">
+        ✓ Получихме твоето съобщение! Ще се свържем с теб скоро.
+      </div>
+
+      <!-- Contact info (populated by main.js from config.contact) -->
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <span class="ci-icon" aria-hidden="true">📞</span>
+          <span id="ci-phone"></span>
+        </div>
+        <div class="contact-item">
+          <span class="ci-icon" aria-hidden="true">✉️</span>
+          <span id="ci-email"></span>
+        </div>
+        <div class="contact-item">
+          <span class="ci-icon" aria-hidden="true">📍</span>
+          <span id="ci-addr"></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-main">
+
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img
+            class="footer-logo-img"
+            src="assets/images/logo.jpg"
+            alt="Левски Канадска Борба лого"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+          >
+          <span class="footer-logo-text" style="display:none">ЛЕВСКИ <span class="accent">АРМ</span></span>
+        </div>
+        <p class="footer-tagline">
+          Клуб по канадска борба към спортен клуб „Левски" — София.<br>
+          Основан декември 2023. Член на ОСК Левски и БФКБ.
+        </p>
+      </div>
+
+      <!-- Quick links column -->
+      <div class="footer-col">
+        <h4>Навигация</h4>
+        <nav class="footer-links" aria-label="Footer навигация">
+          <a href="#about">За нас</a>
+          <a href="#news">Новини</a>
+          <a href="#team">Отбор</a>
+          <a href="#coaches">Треньори</a>
+          <a href="#gallery">Галерия</a>
+          <a href="#training">Тренировки</a>
+          <a href="#join">Контакт</a>
+        </nav>
+      </div>
+
+      <!-- Social & contact column -->
+      <div class="footer-col">
+        <h4>Намери ни</h4>
+        <div class="social-row">
+          <a class="social-btn" href="#" data-social="instagram" aria-label="Instagram" rel="noopener noreferrer" target="_blank">📷</a>
+          <a class="social-btn" href="#" data-social="facebook"  aria-label="Facebook"  rel="noopener noreferrer" target="_blank">f</a>
+          <a class="social-btn" href="#" data-social="youtube"   aria-label="YouTube"   rel="noopener noreferrer" target="_blank">▶</a>
+        </div>
+        <div class="footer-contact">
+          <a id="f-phone" href="#"></a>
+          <a id="f-email" href="#"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        &copy; <span id="footer-year"></span> Левски Канадска Борба. Всички права запазени.
+      </p>
+      <div class="footer-bottom-links">
+        <a href="#">Поверителност</a>
+        <a href="#">Условия</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
