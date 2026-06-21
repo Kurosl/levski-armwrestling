@@ -13,21 +13,32 @@
   #mobileMenu { display: flex; }
 
   /* Hero */
-  .hero-inner { grid-template-columns: 1fr; gap: var(--sp-lg); }
+  .hero-inner { grid-template-columns: 1fr; gap: 0; }
   .hero-visual {
-    display: flex;
+    display: flex !important;
     justify-content: center;
-    order: 2;
-    margin-top: var(--sp-md);
-    opacity: 1;
-    animation: none;
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+    width: 100%;
+    padding: var(--sp-md) var(--sp-md) var(--sp-lg);
+    border-top: 1px solid rgba(240, 237, 232, 0.12);
+    margin-top: var(--sp-sm);
   }
-  .hero-logos { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: var(--sp-sm); }
-  .hero-logos-top { gap: var(--sp-sm); }
-  .hero-logos-bottom { margin-top: 0; }
-  .hero-logo-bg { width: clamp(80px, 22vw, 130px); height: clamp(80px, 22vw, 130px); }
-  .hero-logo-osk { width: clamp(110px, 30vw, 180px); height: clamp(110px, 30vw, 180px); margin-top: 0; }
-  .hero-logo-center { width: clamp(70px, 18vw, 110px); height: clamp(70px, 18vw, 110px); }
+  /* Flatten nested divs — all 3 logos in one row */
+  .hero-logos {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0;
+    width: 100%;
+    max-width: 380px;
+  }
+  .hero-logos-top    { display: contents; }
+  .hero-logos-bottom { display: contents; }
+  .hero-logo-bg      { width: clamp(88px, 24vw, 120px); height: clamp(88px, 24vw, 120px); }
+  .hero-logo-osk     { width: clamp(100px, 28vw, 140px); height: clamp(100px, 28vw, 140px); margin-top: 0; }
+  .hero-logo-center  { width: clamp(80px, 22vw, 110px); height: clamp(80px, 22vw, 110px); }
 
   /* About */
   .about-grid { grid-template-columns: 1fr; gap: var(--sp-lg); }
