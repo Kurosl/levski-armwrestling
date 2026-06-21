@@ -32,13 +32,13 @@
     justify-content: space-around;
     gap: 0;
     width: 100%;
-    max-width: 380px;
+    max-width: 100%;
   }
   .hero-logos-top    { display: contents; }
   .hero-logos-bottom { display: contents; }
-  .hero-logo-bg      { width: clamp(120px, 28vw, 170px); height: clamp(120px, 28vw, 170px); }
-  .hero-logo-osk     { width: clamp(140px, 32vw, 200px); height: clamp(140px, 32vw, 200px); margin-top: 0; }
-  .hero-logo-center  { width: clamp(110px, 26vw, 160px); height: clamp(110px, 26vw, 160px); }
+  .hero-logo-bg      { width: 38vw; height: 38vw; max-width: 220px; max-height: 220px; }
+  .hero-logo-osk     { width: 44vw; height: 44vw; max-width: 260px; max-height: 260px; margin-top: 0; }
+  .hero-logo-center  { width: 36vw; height: 36vw; max-width: 210px; max-height: 210px; }
 
   /* About */
   .about-grid { grid-template-columns: 1fr; gap: var(--sp-lg); }
